@@ -1,5 +1,7 @@
 import type { Route } from "./+types/home";
 import Navbar from "../../components/Navbar";
+import {ArrowRight, ArrowUpRight, Clock, Layers} from "lucide-react";
+import Button from "../../components/ui/Button";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,6 +12,75 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-      <Navbar/>
+     <div className={"home"}>
+       <Navbar/>
+       <section className={"hero"}>
+         <div className={"announce"}>
+           <div className={"dot"}>
+             <div className={"pulse"}/>
+           </div>
+           <p>Inroducing Roomify 2.0</p>
+         </div>
+         <h1>Build Beautiful spaces at the speed of thought with Roomify</h1>
+         <p className={"subtitle"}>Roomify is an AI-First design environment that
+         helps you visualize, render and ship architectural projects faster than ever. </p>
+
+         <div className={"actions"}>
+           <a href={"#upload"} className={"cta"}>Start building now <ArrowRight className={"icon"}/></a>
+           <Button size={"lg"} variant={"outline"}>Watch Demo</Button>
+         </div>
+
+         <div className={"upload-shell"} id={"upload"}>
+           <div className={"grid-overlay"}/>
+           <div className={"upload-card"}>
+             <div className={"upload-head"}>
+               <div className={"upload-icon"}>
+                 <Layers className={"icon"}/>
+               </div>
+             <h3>Upload your floor plan</h3>
+             <p>Supports JPG, PNG formats up to 10MB</p>
+             </div>
+           </div>
+         </div>
+       </section>
+
+       <section className={"projects"}>
+         <div className={"section-inner"}>
+           <div className={"section-head"}>
+             <div className={"copy"}>
+               <h2>Project</h2>
+               <p>Your latest projects and shared community projects, all in one place.</p>
+             </div>
+           </div>
+           <div className={"projects-grid"}>
+             <div className={"project-card group"}>
+               <div className={"preview"}>
+                 <img
+                     src={"https://roomify-mlhuk267-dfwu1i.puter.site/projects/1770803585402/rendered.png"}
+                     alt={"project preview"}
+                 />
+                 <div className={"badge"}>
+                   <span>community</span>
+                 </div>
+               </div>
+               <div className={"card-body"}>
+                 <div>
+                   <h3>Project Delhi</h3>
+                   <div className={"meta"}>
+                     <Clock size={12}/>
+                     <span>{new Date('01.01.2027').toLocaleDateString()}</span>
+                     <span>By D.bansal</span>
+                   </div>
+                 </div>
+                 <div className={"arrow"}>
+                   <ArrowUpRight size={18}/>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+     </div>
+
   );
 }
