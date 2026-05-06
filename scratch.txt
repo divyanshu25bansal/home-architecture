@@ -12,7 +12,7 @@
 4. create type.d.ts
 5. in root.tsx create signIn, signOut and refreshAuth functions by using puter.actions.ts.
 6. pass them in context so they can be used everywhere on the app.
-
+7. make hero section for introduction and to upload.
 
 
 
