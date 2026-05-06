@@ -1,0 +1,24 @@
+# installs
+1. npm create vite@latest
+2. npm i lucide-react ( react icon components )
+3. npm install @heyputer/puter.js ( for auth and all )
+4.
+
+
+# Steps
+1. created a basic navbar.
+2. used tailwindCss styles from the tutorial.
+3. made authentication in lib folder
+4. create type.d.ts
+5. in root.tsx create signIn, signOut and refreshAuth functions by using puter.actions.ts.
+6. pass them in context so they can be used everywhere on the app.
+
+
+
+
+
+# Need to learn after project
+1. TailwindCss
+2. React router v7
+3. learn about puter.
+4. learn about traditional model vs user pays model
