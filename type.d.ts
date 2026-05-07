@@ -8,7 +8,7 @@ type AuthContext = {
     isSignedIn: boolean,
     userName: string | null,
     userId: string | null,
-    refreshAuth: () => Promise<Boolean>,
-    signIn: () => Promise<Boolean>,
-    signOut: () => Promise<Boolean>,
+    refreshAuth: () => Promise<boolean>,
+    signIn: () => Promise<boolean>,
+    signOut: () => Promise<boolean>,
 };
